@@ -105,8 +105,7 @@ class connect_four:
             if self.board[i][col_1] == 0:
                 return i
 
-    def show_board(self):
-        print(np.flip(self.board, 0))
+    g = lambda self: print(np.flip(self.board,0))
 
     def ktoWygral(self, player):
         # Warunek sprawdzający czy są 4 monety w rzędzie poziomo
@@ -218,6 +217,6 @@ while not end:
 
 
 
-        app.show_board()
+        app.g()
         turn ^= 1
     pygame.display.update()
