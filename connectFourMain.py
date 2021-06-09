@@ -139,11 +139,9 @@ turn = 0
 screen = pygame.display.set_mode(size)
 set_board(app.board)
 pygame.display.update()
-text = font.render("CHOOSE COLUMN", True, (255, 255, 255))
-screen.blit(text, (0, 70))
 m_1 = pygame.Rect(0, 700, 450, 120)
 info = pygame.Rect(100, 300, 500, 120)
-m_2 = pygame.Rect(350, 70, 400, 30)
+m_2 = pygame.Rect(200, 70, 400, 30)
 reset = Buttons(485, 720, "RESET")
 reset.width = 200
 reset.height = 50
@@ -163,8 +161,6 @@ while not end:
         app = connect_four()
         screen = pygame.display.set_mode(size)
         set_board(app.board)
-        text = font.render("CHOOSE COLUMN", True, (255, 255, 255))
-        screen.blit(text, (0, 70))
         pygame.display.update()
 
     for event in pygame.event.get():
@@ -185,7 +181,6 @@ while not end:
         app = connect_four()
         screen = pygame.display.set_mode(size)
         set_board(app.board)
-        screen.blit(text, (0, 70))
         pygame.display.update()
 
     if column >= 0:
@@ -211,12 +206,11 @@ while not end:
                 app = connect_four()
                 screen = pygame.display.set_mode(size)
                 set_board(app.board)
-                screen.blit(text, (0, 70))
                 pygame.display.update()
 
         else:
             text_5 = font.render("COLUMN FULL", True, (201, 182, 204))
-            screen.blit(text_5, (400, 70))
+            screen.blit(text_5, (200, 70))
             pygame.display.update()
             pygame.time.wait(1000)
             pygame.draw.rect(screen, (0, 0, 0), m_2)
@@ -227,6 +221,3 @@ while not end:
         app.show_board()
         turn ^= 1
     pygame.display.update()
-
-
-
