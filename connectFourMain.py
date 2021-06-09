@@ -104,7 +104,7 @@ class connect_four:
         for i in range(ROWS):
             if self.board[i][col_1] == 0:
                 return i
-
+# lambda wyrażenie
     g = lambda self: print(np.flip(self.board,0))
 
     def ktoWygral(self, player):
