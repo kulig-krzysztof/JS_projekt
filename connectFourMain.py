@@ -108,6 +108,7 @@ while not end:
             column = i
 
     if reset.set_buttons():
+        turn = 0
         var = app.board
         app = logic.connect_four()
         screen = pygame.display.set_mode(size)

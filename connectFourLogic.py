@@ -8,13 +8,13 @@ COLS = 7
 # klasa z metodami logicznymi dotyczącymi gry
 class connect_four:
     def __init__(self):
-        self.board = np.zeros((ROWS, COLS))
+#list comprehensions
+        self.board = [[0 for i in range(COLS)] for i in range(ROWS)]
 
     def put_coin(self,row_1, col_1, player):
         self.board[row_1][col_1] = player
-
-    def full_col(self, col_1):
-        return self.board[ROWS - 1][col_1] == 0
+#lambda wyrażenie
+    full_col = lambda self,col_1: self.board[ROWS - 1][col_1] == 0
 
     def full_board(self):
         counter = 0
