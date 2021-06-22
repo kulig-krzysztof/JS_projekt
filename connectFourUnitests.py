@@ -19,7 +19,6 @@ class unitests(unittest.TestCase):
         self.assertTrue(result)
 
     def testWinPionowo(self):
-        # given
         player = 1
         column = random.randint(0, 6)
         game = logic.connect_four()
